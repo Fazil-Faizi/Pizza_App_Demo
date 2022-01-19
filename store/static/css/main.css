@@ -1,0 +1,148 @@
+a:link {color:#294f08;} a:visited {color:#152705;}
+
+body {
+  background-color: #FFEDBD;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: left;
+    font-family: arial, serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 24px;
+    font-family: arial, serif;
+    font-style: normal;
+    font-weight: 400;
+}
+h3 {
+    font-size: 18px;
+    font-family: arial, serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+#wrapper {
+    background-color: #FFEDBD;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: arial, sans;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+#mainnav ul {
+    background: #430000;
+    list-style-type: none;
+
+}
+
+#mainnav img{
+    height: 24px;
+}
+
+#mainnav a {
+    width: 15%;
+    display: block;
+    float: left;
+    text-align: center;
+    background-color: #430000;
+    color: #FFFFFF;
+	text-decoration: none;
+	font-size: 24px;
+    font-family: arial, serif;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#mainnav a:hover{
+	background-color: #4f4f4f;
+}
+
+#contents{
+	width: 75%;
+	float:left;
+}
+
+
+#main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#main img {
+	margin-top: 50px;
+	width: 100%;
+}
+
+#searchBar {
+    border-radius: 25px;
+    background-color: #430000;
+	color: white;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    width: 25%;
+    margin-left: 20px;
+	text-align: center;
+}
+
+#footer {
+	clear:left;
+    background: #430000;
+    width: 1200px;
+    height: 170px;
+    padding: 20px;
+    margin: 0px;
+    color: white;
+}
+
+#contact{
+	float: left;
+}
+#social{
+	margin-left: 875px;
+}
+
+#social img{
+	padding: 20px;
+}
+
+#copywrite {
+	float:right;
+	text-align: right;
+	margin-top: 20px;
+}
+
+
+.quantity{
+	display: inline-block;
+	font-weight: 700;
+	padding-right:10px;
+
+
+}
+
+.chg-quantity{
+	width: 12px;
+	cursor: pointer;
+	display: block;
+	margin-top: 5px;
+	transition:.1s;
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color: #fff4cc;
+  padding: 20px;
+}

@@ -1,0 +1,27 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+<div id="main">
+	<div class="container">
+		<div class="row">
+{% for food in foods %}
+<div class="col-sm-3">
+	<img src="{{food.image.url}}">
+	<div class="box-element product">
+		<h6><strong>{{food.name}}</strong></h6>
+		<hr>
+
+		<h4><strong>${{food.price|floatformat:2}}</strong></h4>
+
+	</div>
+	<a href="{{ food.get_add_to_cart_url }}" class="btn btn-outline-secondary" >Add to cart
+	</a>
+
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+
+{% endblock content %}

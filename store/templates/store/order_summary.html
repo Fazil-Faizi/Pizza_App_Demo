@@ -1,0 +1,64 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+
+
+<br>
+<td colspan="5">
+    <a href="{% url 'store:checkout' %}" class="btn btn-outline-secondary">Checkout</a>
+    <a href="{% url 'store:pizza-menu' %}" class="btn btn-outline-secondary">Continue Shopping</a>
+</td>
+<br><br><br>
+<h2>Order Summary </h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope='col'>#</th>
+      <th scope="col">Food Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total Price</th>
+    </tr>
+  </thead>
+  <tbody>
+{% for order_food in object.foods.all %}
+    <tr>
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{order_food.food.name}}</td>
+      <td>${{order_food.food.price}}</td>
+      <td><div class="quantity">{{order_food.quantity}}
+				      <a href="{% url 'store:add-from-cart' order_food.food.slug %}" class="btn"><img src="{% static  'images/arrow-up.png' %}" width="20px" height="20px">
+
+
+				      <a href="{% url 'store:remove-from-cart' order_food.food.slug %}" class="btn"><img src="{% static  'images/arrow-down.png'%}" width="20px" height="20px">
+			</div>
+      </td>
+      <td>{{order_food.get_total_food_price}}</td>
+    </tr>
+
+    {% empty %}
+    <tr>
+        <td colspan="5">Your Cart Empty</td>
+    </tr>
+
+     <tr>
+        <td colspan="5">
+            <a href="/" class="btn btn-outline-secondary">Continue Shopping</a>
+        </td>
+    </tr>
+
+{% endfor %}
+</tbody>
+
+<td colspan="4">Order Total</td>
+<td><b>$ {{object.get_total}}</b></td>
+
+
+</table>
+
+</div>
+
+{% endblock content %}
